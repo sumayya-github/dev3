@@ -44,7 +44,7 @@ spec:
         app: apache
    spec:
      containers:
-      - image: sumayya26jenkins:kube
+      - image: vimal13/apache-webserver-php
         name: apache
         ports:
          - containerPort: 31000
