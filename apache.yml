@@ -43,7 +43,7 @@ spec:
         app: apache
     spec:
       containers:
-      - image: vimal13/apache-webserver-php
+      - image: httpd
         name: apache
         ports:
          - containerPort: 31000
