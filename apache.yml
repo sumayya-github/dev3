@@ -14,7 +14,7 @@ spec:
     type: LoadBalancer
 ---
 apiVersion: v1
-kind: PersistenVolumeClaim
+kind: PersistentVolumeClaim
 metadata:
   name: apache-pvc
   labels:
