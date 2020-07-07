@@ -11,10 +11,10 @@ spec:
      targetPort: 80
   selector:
     app: php
-    type: LoadBalancer
+    type: NodePort
 ---
 apiVersion: v1
-kind: PersistenVolumeClaim
+kind: PersistentVolumeClaim
 metadata:
   name: php-pvc
   labels:
@@ -55,4 +55,4 @@ spec:
      volumes:
       - name: php-vol
         persistentVolumeClaim:
-          claimNmae: php-pvc
+          claimName: php-pvc
