@@ -42,8 +42,8 @@ spec:
     metadata:
       labels:
         app: apache
-   spec:
-     containers:
+    spec:
+      containers:
       - image: vimal13/apache-webserver-php
         name: apache
         ports:
