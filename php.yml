@@ -6,6 +6,7 @@ metadata:
     app: php
 spec:
   ports:
+  - nodePort: 312000
     port: 80
     targetPort: 80
   selector:
@@ -46,7 +47,7 @@ spec:
       - image: vimal13/apache-webserver-php
         name: php
         ports:
-         - containerPort: 80
+         - containerPort: 32000
            name: php
         volumeMounts:
           - name: php-vol
