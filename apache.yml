@@ -6,9 +6,8 @@ metadata:
     app: apache
 spec:
   ports:
-   - nodePort: 31000
-     port: 80
-     targetPort: 80
+    port: 80
+    targetPort: 80
   selector:
     app: apache
     type: LoadBalancer
@@ -29,7 +28,7 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: apache-pod
+  name: apache
   labels: 
     app: apache
 spec:
@@ -47,7 +46,7 @@ spec:
       - image: vimal13/apache-webserver-php
         name: apache
         ports:
-         - containerPort: 31000
+         - containerPort: 80
            name: apache
         volumeMounts:
           - name: apache-vol
