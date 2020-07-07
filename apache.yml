@@ -55,4 +55,4 @@ spec:
      volumes:
       - name: apache-vol
         persistentVolumeClaim:
-          claimNmae: apache-pvc
+          claimName: apache-pvc
