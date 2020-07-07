@@ -6,8 +6,7 @@ metadata:
     app: apache
 spec:
   ports:
-  - nodePort: 31000
-    port: 80
+  - port: 80
     targetPort: 80
   selector:
     app: apache
@@ -16,7 +15,7 @@ spec:
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: apache-pvc
+  name: apache-pv-claim
   labels:
     app: apache
 spec:
@@ -55,4 +54,4 @@ spec:
      volumes:
       - name: apache-vol
         persistentVolumeClaim:
-          claimName: apache-pvc
+          claimName: apache-pv-claim
